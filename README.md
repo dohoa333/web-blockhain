@@ -1,4 +1,4 @@
-`
+```bash
 # 下载安装Truffle Framework
 npm install -g truffle
 
@@ -241,4 +241,4 @@ export default App;
 联系人列表
 ETHtest
 手机号码： 13800000000
-`
+```
