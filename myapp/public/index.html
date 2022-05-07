@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <script>
+	  function adapt(e, t) {
+		var n = window.document.createElement("div");
+	    return (
+		  (n.style.width = "1rem"),
+		  (n.style.display = "none"),
+		  window.document.getElementsByTagName("head")[0].appendChild(n),
+		  parseFloat(window.getComputedStyle(n, null).getPropertyValue("width"))
+	    );
+	  }
+	  !(function (e, t, n, d) {
+		var i = e.documentElement,
+			o = adapt(750, 100),
+			a = "orientationchange" in window ? "orientationchange" : "resize",
+			r = function () {
+			  var n =
+				  t.innerWidth ||
+				  e.documentElement.clientWidth ||
+				  e.body.clientWidth;
+				  n && (i.style.fontSize = n < 750 ? (((n / 750) * 100) / o) * 100 + "%" : "625%");
+			};
+	    	e.addEventListener && (t.addEventListener(a, r, !1),
+			e.addEventListener("DOMContentLoaded", r, !1));
+	  })(document, window);
+    </script>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+	  if ('addEventListener' in document) {
+	    document.addEventListener('DOMContentLoaded', function() {
+		  FastClick.attach(document.body);
+	    }, false);
+	  }
+	  if(!window.Promise) {
+	    document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+	  }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+

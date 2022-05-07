@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script><!-- react使用es6语法，引入babel编译 -->
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">  // type为text/babel，否则无法识别jsx语法
+    // 函数组件
+    function Hello(props) {
+      return <h1>Hello! { props.name }</h1>
+    }
+    // 类组件
+    class Welcome extends React.Component {
+      render() {
+        return <h1>Welcome! {this.props.name}</h1>
+      }
+    }
+    // 复合组件
+    function Name(props) {
+      return <h1>网站名称：{ props.name }</h1>
+    }
+    function Url(props) {
+      return <h1>网站地址：{ props.url }</h1>
+    }
+    function Nickname(props) {
+      return <h1>网站昵称：{ props.nickename }</h1>
+    }
+    
+    ReactDOM.render(
+      <div>
+        <Hello name="李银河" />
+        <Welcome name="王小波" />
+
+        <Name name="以太坊" />
+        <Url url="https://www.eth.org" />
+        <Nickname nickename="eth" />
+      </div>,
+      document.getElementById('root')
+    )
+  </script>
+</body>
+</html>

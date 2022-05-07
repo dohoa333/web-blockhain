@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script><!-- react使用es6语法，引入babel编译 -->
+</head>
+<body>
+  <div id="root"></div>
+  <div id="root2"></div>
+  <script type="text/babel">  // type为text/babel，否则无法识别jsx语法
+    const title = 'React'
+    const i = 1
+    const myStyle = {
+      fontSize: 50,
+      color: '#f00'
+    }
+    const arr = [
+      <li>三国</li>,
+      <li>西游</li>,
+      <li>红楼</li>,
+      <li>水浒</li>
+    ]
+    const element = (
+      <div>
+        {/*  // JSX中嵌入JavaScript表达式 */}
+        <h1>Hello { title }!</h1>
+        <h1>{ 1+1 }</h1>
+        
+        {/*  // JSX中不能使用ifelse，可以使用三元表达式代替 */}
+        <h1>{ i== 1 ? 'True' : 'False' }</h1>
+        <h1 style = {myStyle}>引入样式</h1>
+        
+        {/* JSX中插入数组，数组会自动展开 */}
+        <ul>
+          { arr }
+        </ul>
+        
+      </div>
+    )
+    ReactDOM.render(
+      element,
+      document.getElementById('root')
+    )
+  </script>
+  <script src="./1.js"></script>
+</body>
+</html>
