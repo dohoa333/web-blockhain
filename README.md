@@ -52,7 +52,7 @@ pragma solidity >=0.4.22 <0.9.0;
 contract Contacts {
   uint public count = 0; // 状态变量
 }
-// count是一个特殊变了，写入改变了的任何数据豆浆存储在区块链存储中，public修饰符允许智能合约外对齐访问
+// count是一个特殊变量，写入该变量的任何数据都将存储在区块链存储中，public修饰符允许智能合约外对其访问
 
 
 # 前端React
