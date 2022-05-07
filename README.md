@@ -1,3 +1,23 @@
+### 工具
+
+- 区块链钱包插件：`MetaMask` 浏览器插件市场 - MetaMask插件安装
+
+- 智能合约工具：`Truffle Framework` 提供一套用于开发以太坊智能合约的工具
+
+  开发环境，测试框架
+
+  提供了智能合约管理、部署和迁移、网络管理、开发控制台等工具
+
+- 以太坊测试链：`Ganache` 一个 个人区块链，一个本地开发区块链，用来模仿公共区块链的所以行为
+
+- 编写智能合约语言：`Solidity`，一种用于实现智能合约的面向对象的高级语言
+
+- 智能合约必须部署到链上进行测试，部署和测试时间较长，需要申请一些假的代币，对于开发者最好部署在私链上，`Ganache` 是以太坊开发的个人区块链
+
+中心化app的数据存储在中心化服务器上，Dapp的数据库存储在区块链上
+
+![dApp](C:\Users\Administrator\Desktop\Dapp.png)
+
 ```bash
 # 下载安装Truffle Framework
 npm install -g truffle
