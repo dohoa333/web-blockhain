@@ -16,7 +16,7 @@
 
 中心化app的数据存储在中心化服务器上，Dapp的数据库存储在区块链上
 
-(![dApp](blockchain/Dapp.png))
+![dApp](blockchain/Dapp.png)
 
 ```bash
 # 下载安装Truffle Framework
